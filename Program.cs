@@ -272,11 +272,7 @@ internal class Program : IApiMarker
             options: new DashboardOptions()
             {
                 Authorization = [new HangfireAuthorization()],
-#if DEBUG
                 IsReadOnlyFunc = _ => false
-#else
-                IsReadOnlyFunc = _ => true
-#endif
             });
 
         app.UseAuthentication();
