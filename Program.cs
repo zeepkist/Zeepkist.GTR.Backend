@@ -64,7 +64,7 @@ internal class Program : IApiMarker
                     .Enrich.FromLogContext()
                     .WriteTo.OpenObserve(
                         options.Url,
-                        "default",
+                        options.Organisation,
                         options.Login,
                         options.Token,
                         streamName: options.Stream)
