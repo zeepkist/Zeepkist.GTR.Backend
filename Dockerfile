@@ -4,7 +4,7 @@ EXPOSE 80
 EXPOSE 443
 
 # Install curl and libgcc
-RUN apk add --no-cache curl libgcc
+RUN apk add --no-cache curl libgcc libstdc++ ca-certificates bash gcompat
 
 RUN curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf - -C /usr/local/bin
 
